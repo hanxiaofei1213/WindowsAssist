@@ -31,9 +31,9 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
-    <QtInstall>5.15.0_msvc2019</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
+    <QtInstall>x86-msvc2019-5.15.0</QtInstall>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="QtSettings">
     <QtInstall>5.15.0_msvc2019</QtInstall>
@@ -87,7 +87,6 @@
   <ItemGroup>
     <QtRcc Include="WindowsAssist.qrc" />
     <QtUic Include="src\WindowsAssist.ui" />
-    <QtUic Include="WindowsAssist.ui" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />

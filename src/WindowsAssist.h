@@ -10,6 +10,12 @@ class WindowsAssist : public QDialog
 public:
     WindowsAssist(QWidget *parent = Q_NULLPTR);
 
+
+protected:
+    void initUi();
+    void initStyleSheet();
+
 private:
     Ui::WindowsAssistClass ui;
+
 };
