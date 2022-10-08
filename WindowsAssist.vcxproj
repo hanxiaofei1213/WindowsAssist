@@ -86,14 +86,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <QtRcc Include="WindowsAssist.qrc" />
+    <QtUic Include="src\ui\ShortcutWidget.ui" />
     <QtUic Include="src\WindowsAssist.ui" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ui\ShortcutWidget.cpp" />
     <ClCompile Include="src\WindowsAssist.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\WindowsAssist.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\ui\ShortcutWidget.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

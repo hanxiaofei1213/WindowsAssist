@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="src\ui">
+      <UniqueIdentifier>{16608f93-4f25-4cf4-a6a0-c8e91301bd7f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="WindowsAssist.qrc">
@@ -26,15 +29,24 @@
     <ClCompile Include="src\WindowsAssist.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\ui\ShortcutWidget.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\WindowsAssist.h">
       <Filter>src</Filter>
     </QtMoc>
+    <QtMoc Include="src\ui\ShortcutWidget.h">
+      <Filter>src\ui</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="src\WindowsAssist.ui">
       <Filter>src</Filter>
+    </QtUic>
+    <QtUic Include="src\ui\ShortcutWidget.ui">
+      <Filter>src\ui</Filter>
     </QtUic>
   </ItemGroup>
 </Project>
