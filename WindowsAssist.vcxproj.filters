@@ -16,6 +16,9 @@
     <Filter Include="src\ui">
       <UniqueIdentifier>{16608f93-4f25-4cf4-a6a0-c8e91301bd7f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="import">
+      <UniqueIdentifier>{972a6294-f765-4bc1-89eb-92a691ba054b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="WindowsAssist.qrc">
@@ -32,6 +35,12 @@
     <ClCompile Include="src\ui\ShortcutWidget.cpp">
       <Filter>src\ui</Filter>
     </ClCompile>
+    <ClCompile Include="QHotkey\QHotkey\qhotkey.cpp">
+      <Filter>import</Filter>
+    </ClCompile>
+    <ClCompile Include="QHotkey\QHotkey\qhotkey_win.cpp">
+      <Filter>import</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\WindowsAssist.h">
@@ -39,6 +48,12 @@
     </QtMoc>
     <QtMoc Include="src\ui\ShortcutWidget.h">
       <Filter>src\ui</Filter>
+    </QtMoc>
+    <QtMoc Include="QHotkey\QHotkey\qhotkey.h">
+      <Filter>import</Filter>
+    </QtMoc>
+    <QtMoc Include="QHotkey\QHotkey\qhotkey_p.h">
+      <Filter>import</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

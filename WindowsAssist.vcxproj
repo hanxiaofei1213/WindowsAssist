@@ -36,7 +36,7 @@
     <QtInstall>x86-msvc2019-5.15.0</QtInstall>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="QtSettings">
-    <QtInstall>5.15.0_msvc2019</QtInstall>
+    <QtInstall>x86-msvc2019-5.15.0</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
@@ -90,6 +90,8 @@
     <QtUic Include="src\WindowsAssist.ui" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="QHotkey\QHotkey\qhotkey.cpp" />
+    <ClCompile Include="QHotkey\QHotkey\qhotkey_win.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ui\ShortcutWidget.cpp" />
     <ClCompile Include="src\WindowsAssist.cpp" />
@@ -99,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\ui\ShortcutWidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QHotkey\QHotkey\qhotkey.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QHotkey\QHotkey\qhotkey_p.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
