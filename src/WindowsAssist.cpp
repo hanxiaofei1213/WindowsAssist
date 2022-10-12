@@ -32,6 +32,7 @@ void WindowsAssist::showEvent(QShowEvent* event) {
 
 void WindowsAssist::closeEvent(QCloseEvent* event) {
     showMinimized();
+    //exit(0);
 }
 
 void WindowsAssist::slotExitProgram() {

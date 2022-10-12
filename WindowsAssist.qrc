@@ -3,4 +3,7 @@
         <file>res/trayIcon.png</file>
         <file>res/mainIcon.png</file>
     </qresource>
+    <qresource prefix="/qss">
+        <file>res/styleSheet.qss</file>
+    </qresource>
 </RCC>

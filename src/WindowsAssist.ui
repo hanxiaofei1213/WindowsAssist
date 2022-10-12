@@ -19,7 +19,7 @@
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="widget">
       <attribute name="title">
        <string>快捷键</string>
       </attribute>
@@ -28,19 +28,19 @@
         <number>0</number>
        </property>
        <property name="leftMargin">
-        <number>0</number>
+        <number>2</number>
        </property>
        <property name="topMargin">
-        <number>0</number>
+        <number>2</number>
        </property>
        <property name="rightMargin">
-        <number>0</number>
+        <number>2</number>
        </property>
        <property name="bottomMargin">
-        <number>0</number>
+        <number>2</number>
        </property>
        <item>
-        <widget class="QFrame" name="shortcutWidget">
+        <widget class="ShortcutWidget" name="shortcutWidget">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -78,6 +78,14 @@
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ShortcutWidget</class>
+   <extends>QFrame</extends>
+   <header>shortcut\ShortcutWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="../res/WindowsAssist.qrc"/>
  </resources>

@@ -13,11 +13,20 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="src\ui">
-      <UniqueIdentifier>{16608f93-4f25-4cf4-a6a0-c8e91301bd7f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="import">
       <UniqueIdentifier>{972a6294-f765-4bc1-89eb-92a691ba054b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="import\QHotKey">
+      <UniqueIdentifier>{a95b38af-488f-456f-8634-ceb70967223b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{8a4ce67c-0428-4d6f-bebb-48b9fdf3c225}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\shortcut">
+      <UniqueIdentifier>{16608f93-4f25-4cf4-a6a0-c8e91301bd7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\test">
+      <UniqueIdentifier>{5b65e8ea-4903-4b17-b657-e47210d7ab57}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -32,36 +41,74 @@
     <ClCompile Include="src\WindowsAssist.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\ui\ShortcutWidget.cpp">
-      <Filter>src\ui</Filter>
-    </ClCompile>
     <ClCompile Include="QHotkey\QHotkey\qhotkey.cpp">
-      <Filter>import</Filter>
+      <Filter>import\QHotKey</Filter>
     </ClCompile>
     <ClCompile Include="QHotkey\QHotkey\qhotkey_win.cpp">
-      <Filter>import</Filter>
+      <Filter>import\QHotKey</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shortcut\ShortcutWidget.cpp">
+      <Filter>src\shortcut</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test\TestClass.cpp">
+      <Filter>src\test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shortcut\ShortcutRepository.cpp">
+      <Filter>src\shortcut</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shortcut\ShortcurService.cpp">
+      <Filter>src\shortcut</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\KeyboardEvent.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shortcut\ShortcutFunction.cpp">
+      <Filter>src\shortcut</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\WindowsAssist.h">
       <Filter>src</Filter>
     </QtMoc>
-    <QtMoc Include="src\ui\ShortcutWidget.h">
-      <Filter>src\ui</Filter>
+    <QtMoc Include="QHotkey\QHotkey\qhotkey_p.h">
+      <Filter>import\QHotKey</Filter>
     </QtMoc>
     <QtMoc Include="QHotkey\QHotkey\qhotkey.h">
-      <Filter>import</Filter>
+      <Filter>import\QHotKey</Filter>
     </QtMoc>
-    <QtMoc Include="QHotkey\QHotkey\qhotkey_p.h">
-      <Filter>import</Filter>
+    <QtMoc Include="src\shortcut\ShortcutWidget.h">
+      <Filter>src\shortcut</Filter>
+    </QtMoc>
+    <QtMoc Include="src\test\TestClass.h">
+      <Filter>src\test</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="src\WindowsAssist.ui">
       <Filter>src</Filter>
     </QtUic>
-    <QtUic Include="src\ui\ShortcutWidget.ui">
-      <Filter>src\ui</Filter>
+    <QtUic Include="src\shortcut\ShortcutWidget.ui">
+      <Filter>src\shortcut</Filter>
     </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\utils\GlobalDefine.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shortcut\ShortcutData.h">
+      <Filter>src\shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shortcut\ShortcutRepository.h">
+      <Filter>src\shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\KeyboardEvent.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shortcut\ShortcutFunction.h">
+      <Filter>src\shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shortcut\ShortcurService.h">
+      <Filter>src\shortcut</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

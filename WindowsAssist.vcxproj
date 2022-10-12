@@ -31,13 +31,13 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>core;gui;testlib;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
     <QtInstall>x86-msvc2019-5.15.0</QtInstall>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="QtSettings">
     <QtInstall>x86-msvc2019-5.15.0</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>core;gui;testlib;widgets</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
   <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
@@ -58,6 +58,16 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
   </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>./src;./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>./src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
     <ClCompile>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
@@ -86,27 +96,42 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <QtRcc Include="WindowsAssist.qrc" />
-    <QtUic Include="src\ui\ShortcutWidget.ui" />
+    <QtUic Include="src\shortcut\ShortcutWidget.ui" />
     <QtUic Include="src\WindowsAssist.ui" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="QHotkey\QHotkey\qhotkey.cpp" />
     <ClCompile Include="QHotkey\QHotkey\qhotkey_win.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\ui\ShortcutWidget.cpp" />
+    <ClCompile Include="src\shortcut\ShortcurService.cpp" />
+    <ClCompile Include="src\shortcut\ShortcutFunction.cpp" />
+    <ClCompile Include="src\shortcut\ShortcutRepository.cpp" />
+    <ClCompile Include="src\shortcut\ShortcutWidget.cpp" />
+    <ClCompile Include="src\test\TestClass.cpp" />
+    <ClCompile Include="src\utils\KeyboardEvent.cpp" />
     <ClCompile Include="src\WindowsAssist.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\WindowsAssist.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="src\ui\ShortcutWidget.h" />
-  </ItemGroup>
-  <ItemGroup>
     <QtMoc Include="QHotkey\QHotkey\qhotkey.h" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QHotkey\QHotkey\qhotkey_p.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\utils\KeyboardEvent.h" />
+    <QtMoc Include="src\shortcut\ShortcutWidget.h" />
+    <ClInclude Include="src\shortcut\ShortcurService.h" />
+    <ClInclude Include="src\shortcut\ShortcutData.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <QtMoc Include="src\test\TestClass.h" />
+    <ClInclude Include="src\shortcut\ShortcutFunction.h" />
+    <ClInclude Include="src\shortcut\ShortcutRepository.h" />
+    <ClInclude Include="src\utils\GlobalDefine.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
