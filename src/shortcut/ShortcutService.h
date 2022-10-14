@@ -1,12 +1,16 @@
 #pragma once
 #include <vector>
+#include <QObject>
 #include "ShortcutData.h"
 
 class ShortcutRepository;
-class ShortcurService {
+class ShortcutFunction;
+class ShortcutService : public QObject {
+    Q_OBJECT
+
 public:
-    ShortcurService(ShortcutRepository* pRepository);
-    ~ShortcurService();
+    ShortcutService(ShortcutRepository* pRepository, ShortcutFunction* pShortcutFunction);
+    ~ShortcutService();
 
     bool registerShortcut(const ShortcutData& shortcut);
     bool unRegisterShortcut(const ShortcutData& shortcut);
@@ -15,6 +19,6 @@ public:
 
 private:
     ShortcutRepository* m_pRepository = nullptr;
-
+    ShortcutFunction* m_pFunction = nullptr;
 };
 

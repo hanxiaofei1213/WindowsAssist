@@ -7,5 +7,8 @@ class TestClass : public QObject {
 private slots:
     void test0();
 
+    void test_ShortcutService_registerShortcut();
+
+    void test_ShortcutFunction_getProcessor();
 };
 

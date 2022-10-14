@@ -56,7 +56,7 @@
     <ClCompile Include="src\shortcut\ShortcutRepository.cpp">
       <Filter>src\shortcut</Filter>
     </ClCompile>
-    <ClCompile Include="src\shortcut\ShortcurService.cpp">
+    <ClCompile Include="src\shortcut\ShortcutService.cpp">
       <Filter>src\shortcut</Filter>
     </ClCompile>
     <ClCompile Include="src\utils\KeyboardEvent.cpp">
@@ -82,6 +82,9 @@
     <QtMoc Include="src\test\TestClass.h">
       <Filter>src\test</Filter>
     </QtMoc>
+    <QtMoc Include="src\shortcut\ShortcutService.h">
+      <Filter>src\shortcut</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="src\WindowsAssist.ui">
@@ -105,9 +108,6 @@
       <Filter>src\utils</Filter>
     </ClInclude>
     <ClInclude Include="src\shortcut\ShortcutFunction.h">
-      <Filter>src\shortcut</Filter>
-    </ClInclude>
-    <ClInclude Include="src\shortcut\ShortcurService.h">
       <Filter>src\shortcut</Filter>
     </ClInclude>
   </ItemGroup>

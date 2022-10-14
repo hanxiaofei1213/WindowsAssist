@@ -20,7 +20,6 @@ void WindowsAssist::initUi() {
 }
 
 void WindowsAssist::initTrayMenu() {
-    // Todo(wangwenxi): 菜单要设一下样式表
     m_trayMenu.addAction(QString::fromStdWString(L"退出"), this, &WindowsAssist::slotExitProgram);
 
     m_systemTray.setContextMenu(&m_trayMenu);
@@ -31,8 +30,8 @@ void WindowsAssist::showEvent(QShowEvent* event) {
 }
 
 void WindowsAssist::closeEvent(QCloseEvent* event) {
-    showMinimized();
-    //exit(0);
+    //showMinimized();
+    exit(0);
 }
 
 void WindowsAssist::slotExitProgram() {

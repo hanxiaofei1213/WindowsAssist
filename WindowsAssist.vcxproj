@@ -103,7 +103,7 @@
     <ClCompile Include="QHotkey\QHotkey\qhotkey.cpp" />
     <ClCompile Include="QHotkey\QHotkey\qhotkey_win.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\shortcut\ShortcurService.cpp" />
+    <ClCompile Include="src\shortcut\ShortcutService.cpp" />
     <ClCompile Include="src\shortcut\ShortcutFunction.cpp" />
     <ClCompile Include="src\shortcut\ShortcutRepository.cpp" />
     <ClCompile Include="src\shortcut\ShortcutWidget.cpp" />
@@ -123,7 +123,7 @@
   <ItemGroup>
     <ClInclude Include="src\utils\KeyboardEvent.h" />
     <QtMoc Include="src\shortcut\ShortcutWidget.h" />
-    <ClInclude Include="src\shortcut\ShortcurService.h" />
+    <QtMoc Include="src\shortcut\ShortcutService.h" />
     <ClInclude Include="src\shortcut\ShortcutData.h">
       <SubType>
       </SubType>

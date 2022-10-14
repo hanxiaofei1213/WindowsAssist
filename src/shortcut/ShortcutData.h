@@ -8,7 +8,7 @@ struct ShortcutData {
     QString m_strShortCut;
     QString m_strShortCutDescription;
 
-    bool isValid() {
+    bool isValid() const {
         return m_nIndex != -1;
     }
 };

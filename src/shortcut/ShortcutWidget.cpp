@@ -3,24 +3,12 @@
 #include <windows.h>
 
 #include "utils/GlobalDefine.h"
-#include "utils/KeyboardEvent.h"
-#include "QHotkey/QHotkey/QHotkey"
+#include "ShortcutData.h"
 
-ShortcutWidget::ShortcutWidget(QWidget* parent /*= nullptr*/) {
+ShortcutWidget::ShortcutWidget(QWidget* parent /*= nullptr*/) : m_shortcutService(&m_shortcutRepository, &m_shortcutFunction) {
     initUI();
     initConnect();
     updateShortcut();
-
-    // Test(wangwenxi): 测试
-    QHotkey* hotkey = new QHotkey(QKeySequence("Esc"), true);
-    connect(hotkey, &QHotkey::activated, [&]() {
-        int key1 = VK_MENU;
-        int key2 = VK_F4;
-        KeyboardEvent keyboardEvent({ VK_MENU, VK_F4 });
-        keyboardEvent.exec();
-    });
-
-
 }
 
 ShortcutWidget::~ShortcutWidget() {
@@ -41,6 +29,7 @@ void ShortcutWidget::initConnect() {
 }
 
 void ShortcutWidget::updateShortcut() {
+    
     // Todo(wangwenxi): 获取所有快捷键
 
 
