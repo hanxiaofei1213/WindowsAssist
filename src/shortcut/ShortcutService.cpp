@@ -17,12 +17,12 @@ bool ShortcutService::registerShortcut(const ShortcutData& shortcut) {
     }
 
     QHotkey* hotkey = new QHotkey(this);
-    bool bSuccess = hotkey->setShortcut(QKeySequence("Esc"), true);
+    bool bSuccess = hotkey->setShortcut(QKeySequence(shortcut.m_strShortCut), true);
     if (!bSuccess) {
         return false;
     }
 
-    connect(hotkey, &QHotkey::activated, m_pFunction->getProcessor(ShortcutFuncId::CLOSE_WINDOW));
+    connect(hotkey, &QHotkey::activated, m_pFunction->getProcessor(shortcut.m_nFuncId));
     return true;
 }
 

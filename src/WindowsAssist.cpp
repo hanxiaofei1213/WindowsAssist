@@ -4,6 +4,16 @@
 WindowsAssist::WindowsAssist(QWidget* parent)
     : QDialog(parent), m_systemTray(this), m_trayMenu(this) {
     initUi();
+    initConnect();
+}
+
+WindowsAssist::~WindowsAssist() {
+
+}
+
+WindowsAssist* WindowsAssist::self() {
+    static WindowsAssist assist;
+    return &assist;
 }
 
 void WindowsAssist::initUi() {
@@ -19,9 +29,12 @@ void WindowsAssist::initUi() {
     m_systemTray.show();
 }
 
-void WindowsAssist::initTrayMenu() {
-    m_trayMenu.addAction(QString::fromStdWString(L"ÍË³ö"), this, &WindowsAssist::slotExitProgram);
+void WindowsAssist::initConnect() {
+    connect(&m_systemTray, &QSystemTrayIcon::activated, this, &WindowsAssist::onTrayActivated);
+}
 
+void WindowsAssist::initTrayMenu() {
+    m_trayMenu.addAction(QString::fromStdWString(L"ÍË³ö"), this, &WindowsAssist::onExitProgram);
     m_systemTray.setContextMenu(&m_trayMenu);
 }
 
@@ -30,10 +43,14 @@ void WindowsAssist::showEvent(QShowEvent* event) {
 }
 
 void WindowsAssist::closeEvent(QCloseEvent* event) {
-    //showMinimized();
-    exit(0);
+    hide();
+    //exit(0);
 }
 
-void WindowsAssist::slotExitProgram() {
+void WindowsAssist::onTrayActivated() {
+    show();
+}
+
+void WindowsAssist::onExitProgram() {
     exit(0);
 }

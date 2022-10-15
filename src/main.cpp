@@ -23,8 +23,8 @@ int wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR cmdline, int n
     int argc = 0;
     QApplication a(argc, nullptr);
     setStyleSheet();
-    WindowsAssist w;
-    w.show();
+    WindowsAssist* pAssist = WindowsAssist::self();
+    pAssist->show();
     TestClass tc;
     QTest::qExec(&tc, 0, nullptr);
     return a.exec();

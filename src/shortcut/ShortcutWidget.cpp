@@ -29,13 +29,15 @@ void ShortcutWidget::initConnect() {
 }
 
 void ShortcutWidget::updateShortcut() {
-    
-    // Todo(wangwenxi): 获取所有快捷键
-
-
-    // Todo(wangwenxi): 注册快捷键，如果成功了，显示，不然显示空的
-
-    insertShortcutInfoToLabel(0, QS("关闭窗口"), "Atl+1");
+    int nRow = 0;
+    std::vector<ShortcutData> vecShortcutData = m_shortcutRepository.listAllShortcut();
+    for (auto shortcut : vecShortcutData) {
+        bool bSuccess = m_shortcutService.registerShortcut(shortcut);
+        if (bSuccess) {
+            insertShortcutInfoToLabel(nRow, shortcut.m_strShortCutDescription, shortcut.m_strShortCut);
+            nRow++;
+        }
+    }
 }
 
 void ShortcutWidget::insertShortcutInfoToLabel(int nRow, const QString& strDes, const QString& strShortcut) {

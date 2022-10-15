@@ -14,6 +14,5 @@ protected:
 
 private:
     std::vector<ShortcutData> m_vecShortcutData;
-
 };
 

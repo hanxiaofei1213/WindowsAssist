@@ -5,11 +5,6 @@
 #include "ShortcutRepository.h"
 #include "ShortcutService.h"
 
-// Todo(wangwenxi): Ë«»÷±à¼­ÃèÊö£¬Ë«»÷±à¼­¿ì½Ý¼ü
-
-class ShortcutFunction;
-class ShortcutRepository;
-class ShortcutService;
 class ShortcutWidget : public QFrame {
     Q_OBJECT
 public:

@@ -16,6 +16,7 @@ protected:
     void initMap();
 
     bool closeWindowProcessor();
+    bool showHideProgram();
 
 private:
     std::map<ShortcutFuncId, ShortcutProcessor> m_mapShortcutFunc;
