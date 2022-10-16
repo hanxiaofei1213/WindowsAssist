@@ -26,7 +26,7 @@ protected:
     virtual void showEvent(QShowEvent* event) override;
     virtual void closeEvent(QCloseEvent* event) override;
 
-    void onTrayActivated();
+    void onTrayActivated(QSystemTrayIcon::ActivationReason reason);
     void onExitProgram();
 
 
