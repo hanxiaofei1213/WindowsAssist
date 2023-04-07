@@ -33,7 +33,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
     <QtModules>core;gui;testlib;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
-    <QtInstall>5.15.0_msvc2019</QtInstall>
+    <QtInstall>x86-msvc2019-5.15.0</QtInstall>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="QtSettings">
     <QtInstall>5.15.0_msvc2019</QtInstall>
@@ -96,6 +96,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <QtRcc Include="WindowsAssist.qrc" />
+    <QtUic Include="src\setting\SettingWidget.ui" />
     <QtUic Include="src\shortcut\ShortcutWidget.ui" />
     <QtUic Include="src\WindowsAssist.ui" />
   </ItemGroup>
@@ -103,6 +104,7 @@
     <ClCompile Include="QHotkey\QHotkey\qhotkey.cpp" />
     <ClCompile Include="QHotkey\QHotkey\qhotkey_win.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\setting\SettingWidget.cpp" />
     <ClCompile Include="src\shortcut\ShortcutService.cpp" />
     <ClCompile Include="src\shortcut\ShortcutFunction.cpp" />
     <ClCompile Include="src\shortcut\ShortcutRepository.cpp" />
@@ -121,6 +123,7 @@
     <QtMoc Include="QHotkey\QHotkey\qhotkey_p.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="src\setting\SettingWidget.h" />
     <ClInclude Include="src\utils\KeyboardEvent.h" />
     <QtMoc Include="src\shortcut\ShortcutWidget.h" />
     <QtMoc Include="src\shortcut\ShortcutService.h" />

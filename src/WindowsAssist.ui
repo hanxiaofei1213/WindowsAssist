@@ -17,7 +17,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="widget">
       <attribute name="title">
@@ -72,6 +72,26 @@
       <attribute name="title">
        <string>设置</string>
       </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="SettingWidget" name="widget_2" native="true"/>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>
@@ -83,6 +103,12 @@
    <class>ShortcutWidget</class>
    <extends>QFrame</extends>
    <header>shortcut\ShortcutWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SettingWidget</class>
+   <extends>QWidget</extends>
+   <header>setting/SettingWidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

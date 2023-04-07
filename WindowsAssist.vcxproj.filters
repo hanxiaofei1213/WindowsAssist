@@ -28,6 +28,9 @@
     <Filter Include="src\test">
       <UniqueIdentifier>{5b65e8ea-4903-4b17-b657-e47210d7ab57}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\setting">
+      <UniqueIdentifier>{213f2946-5841-4ad4-8412-da5ce1b65829}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="WindowsAssist.qrc">
@@ -65,6 +68,9 @@
     <ClCompile Include="src\shortcut\ShortcutFunction.cpp">
       <Filter>src\shortcut</Filter>
     </ClCompile>
+    <ClCompile Include="src\setting\SettingWidget.cpp">
+      <Filter>src\setting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\WindowsAssist.h">
@@ -85,6 +91,9 @@
     <QtMoc Include="src\shortcut\ShortcutService.h">
       <Filter>src\shortcut</Filter>
     </QtMoc>
+    <QtMoc Include="src\setting\SettingWidget.h">
+      <Filter>src\setting</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="src\WindowsAssist.ui">
@@ -92,6 +101,9 @@
     </QtUic>
     <QtUic Include="src\shortcut\ShortcutWidget.ui">
       <Filter>src\shortcut</Filter>
+    </QtUic>
+    <QtUic Include="src\setting\SettingWidget.ui">
+      <Filter>src\setting</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
