@@ -1,8 +1,10 @@
 #include "WindowsAssist.h"
 #include <QtWidgets/QApplication>
+#include <vld.h>
 #include <QFile>
 #include <QTest>
 #include <windows.h>
+#include <memory>
 #include "test/TestClass.h"
 
 void setStyleSheet() {
@@ -23,8 +25,8 @@ int wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR cmdline, int n
     int argc = 0;
     QApplication a(argc, nullptr);
     setStyleSheet();
-    WindowsAssist* pAssist = WindowsAssist::self();
-    pAssist->show();
+    WindowsAssist assist;
+    assist.show();
     TestClass tc;
     QTest::qExec(&tc, 0, nullptr);
     return a.exec();

@@ -9,6 +9,9 @@ class WindowsAssist : public QDialog {
     Q_OBJECT
 
 public:
+    WindowsAssist(QWidget* parent = Q_NULLPTR);
+    ~WindowsAssist();
+
     static WindowsAssist* self();
 
     // Todo(wangwenxi): 快捷打开指定文件/夹
@@ -16,9 +19,6 @@ public:
     // Todo(wangwenxi): 颜色处理
 
 protected:
-    WindowsAssist(QWidget* parent = Q_NULLPTR);
-    ~WindowsAssist();
-
     void initUi();
     void initConnect();
     void initTrayMenu();
@@ -32,6 +32,7 @@ protected:
 
 private:
     Ui::WindowsAssistClass ui;
+    static WindowsAssist* m_pSelf;
     QSystemTrayIcon m_systemTray;
     QMenu m_trayMenu;
 

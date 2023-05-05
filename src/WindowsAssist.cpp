@@ -1,22 +1,24 @@
 #include "WindowsAssist.h"
 #include <QShowEvent>
 
+WindowsAssist* WindowsAssist::m_pSelf = nullptr;
 WindowsAssist::WindowsAssist(QWidget* parent)
     : QDialog(parent), m_systemTray(this), m_trayMenu(this) {
+    m_pSelf = this;
     initUi();
     initConnect();
 }
 
 WindowsAssist::~WindowsAssist() {
-
+    m_pSelf = nullptr;
 }
 
 WindowsAssist* WindowsAssist::self() {
-    static WindowsAssist assist;
-    return &assist;
+    return m_pSelf;
 }
 
 void WindowsAssist::initUi() {
+    // Todo(wangwenxi): 默认选中第一个tab
     ui.setupUi(this);
     initTrayMenu();
 
