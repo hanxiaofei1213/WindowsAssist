@@ -14,10 +14,6 @@ public:
 protected:
     void initConnect();
 
-
-    void onOpenMemoClick();
-
-
 private:
     Ui::SettingWidgetClass ui;
 };

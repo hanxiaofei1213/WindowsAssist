@@ -18,7 +18,6 @@ WindowsAssist* WindowsAssist::self() {
 }
 
 void WindowsAssist::initUi() {
-    // Todo(wangwenxi): 默认选中第一个tab
     ui.setupUi(this);
     initTrayMenu();
 
@@ -29,6 +28,7 @@ void WindowsAssist::initUi() {
     m_systemTray.setToolTip(QString::fromStdWString(L"Windows助手"));
     m_systemTray.setIcon(QIcon(":/img/res/trayIcon.png"));
     m_systemTray.show();
+    selectTab(Tab::Shortcut);
 }
 
 void WindowsAssist::initConnect() {
@@ -38,6 +38,10 @@ void WindowsAssist::initConnect() {
 void WindowsAssist::initTrayMenu() {
     m_trayMenu.addAction(QString::fromStdWString(L"退出"), this, &WindowsAssist::onExitProgram);
     m_systemTray.setContextMenu(&m_trayMenu);
+}
+
+void WindowsAssist::selectTab(Tab tab) {
+    ui.tabWidget->setCurrentIndex(static_cast<int>(tab));
 }
 
 void WindowsAssist::showEvent(QShowEvent* event) {

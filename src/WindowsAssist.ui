@@ -17,9 +17,9 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
-     <widget class="QWidget" name="widget">
+     <widget class="QWidget" name="shortcutWidget_2">
       <attribute name="title">
        <string>快捷键</string>
       </attribute>
@@ -68,7 +68,39 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tab_2">
+     <widget class="QWidget" name="memoWidget">
+      <attribute name="title">
+       <string>备忘</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="MemoFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="settingWidget">
       <attribute name="title">
        <string>设置</string>
       </attribute>
@@ -109,6 +141,12 @@
    <class>SettingWidget</class>
    <extends>QWidget</extends>
    <header>setting/SettingWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MemoFrame</class>
+   <extends>QFrame</extends>
+   <header>memo\MemoFrame.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

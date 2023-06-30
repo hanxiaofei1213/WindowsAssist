@@ -31,6 +31,9 @@
     <Filter Include="src\setting">
       <UniqueIdentifier>{213f2946-5841-4ad4-8412-da5ce1b65829}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\memo">
+      <UniqueIdentifier>{0f73b741-ab55-4f36-8dad-11205843ce1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="WindowsAssist.qrc">
@@ -71,6 +74,12 @@
     <ClCompile Include="src\setting\SettingWidget.cpp">
       <Filter>src\setting</Filter>
     </ClCompile>
+    <ClCompile Include="src\memo\MemoFrame.cpp">
+      <Filter>src\memo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\memo\MemoManager.cpp">
+      <Filter>src\memo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\WindowsAssist.h">
@@ -94,6 +103,12 @@
     <QtMoc Include="src\setting\SettingWidget.h">
       <Filter>src\setting</Filter>
     </QtMoc>
+    <QtMoc Include="src\memo\MemoFrame.h">
+      <Filter>src\memo</Filter>
+    </QtMoc>
+    <QtMoc Include="src\memo\MemoManager.h">
+      <Filter>src\memo</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="src\WindowsAssist.ui">
@@ -104,6 +119,9 @@
     </QtUic>
     <QtUic Include="src\setting\SettingWidget.ui">
       <Filter>src\setting</Filter>
+    </QtUic>
+    <QtUic Include="src\memo\MemoFrame.ui">
+      <Filter>src\memo</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>

@@ -12,16 +12,21 @@ public:
     WindowsAssist(QWidget* parent = Q_NULLPTR);
     ~WindowsAssist();
 
+    enum class Tab {
+        Shortcut,
+        Memo,
+        Setting,
+    };
+
     static WindowsAssist* self();
 
-    // Todo(wangwenxi): 快捷打开指定文件/夹
-    // Todo(wangwenxi): 处理剪切板功能
-    // Todo(wangwenxi): 颜色处理
+    // Todo(wangwenxi): 处理剪切板
 
 protected:
     void initUi();
     void initConnect();
     void initTrayMenu();
+    void selectTab(Tab tab);
 
     virtual void showEvent(QShowEvent* event) override;
     virtual void closeEvent(QCloseEvent* event) override;

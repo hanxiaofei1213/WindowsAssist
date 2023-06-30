@@ -20,7 +20,7 @@ void setStyleSheet() {
     }
 }
 
-int wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR cmdline, int nCmdShow)
+int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR cmdline, int nCmdShow)
 {
     int argc = 0;
     QApplication a(argc, nullptr);

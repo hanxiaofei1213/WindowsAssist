@@ -99,6 +99,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <QtRcc Include="WindowsAssist.qrc" />
+    <QtUic Include="src\memo\MemoFrame.ui" />
     <QtUic Include="src\setting\SettingWidget.ui" />
     <QtUic Include="src\shortcut\ShortcutWidget.ui" />
     <QtUic Include="src\WindowsAssist.ui" />
@@ -107,6 +108,8 @@
     <ClCompile Include="QHotkey\QHotkey\qhotkey.cpp" />
     <ClCompile Include="QHotkey\QHotkey\qhotkey_win.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\memo\MemoFrame.cpp" />
+    <ClCompile Include="src\memo\MemoManager.cpp" />
     <ClCompile Include="src\setting\SettingWidget.cpp" />
     <ClCompile Include="src\shortcut\ShortcutService.cpp" />
     <ClCompile Include="src\shortcut\ShortcutFunction.cpp" />
@@ -127,6 +130,8 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\setting\SettingWidget.h" />
+    <QtMoc Include="src\memo\MemoFrame.h" />
+    <QtMoc Include="src\memo\MemoManager.h" />
     <ClInclude Include="src\utils\KeyboardEvent.h" />
     <QtMoc Include="src\shortcut\ShortcutWidget.h" />
     <QtMoc Include="src\shortcut\ShortcutService.h" />
