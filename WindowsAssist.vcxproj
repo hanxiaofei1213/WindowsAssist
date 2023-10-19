@@ -36,7 +36,7 @@
     <QtInstall>x86-msvc2019-5.15.0</QtInstall>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="QtSettings">
-    <QtInstall>5.15.0_msvc2019</QtInstall>
+    <QtInstall>x86-msvc2019-5.15.0</QtInstall>
     <QtModules>core;gui;testlib;widgets</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
@@ -68,7 +68,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>./src;./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rd\vld\include;./src;./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="Configuration">
@@ -100,6 +100,7 @@
   <ItemGroup>
     <QtRcc Include="WindowsAssist.qrc" />
     <QtUic Include="src\memo\MemoFrame.ui" />
+    <QtUic Include="src\memo\MemoHintDlg.ui" />
     <QtUic Include="src\setting\SettingWidget.ui" />
     <QtUic Include="src\shortcut\ShortcutWidget.ui" />
     <QtUic Include="src\WindowsAssist.ui" />
@@ -109,6 +110,7 @@
     <ClCompile Include="QHotkey\QHotkey\qhotkey_win.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\memo\MemoFrame.cpp" />
+    <QtMoc Include="src\memo\MemoHintDlg.cpp" />
     <ClCompile Include="src\memo\MemoManager.cpp" />
     <ClCompile Include="src\setting\SettingWidget.cpp" />
     <ClCompile Include="src\shortcut\ShortcutService.cpp" />
@@ -116,7 +118,9 @@
     <ClCompile Include="src\shortcut\ShortcutRepository.cpp" />
     <ClCompile Include="src\shortcut\ShortcutWidget.cpp" />
     <ClCompile Include="src\test\TestClass.cpp" />
+    <ClCompile Include="src\utils\DataBaseManager.cpp" />
     <ClCompile Include="src\utils\KeyboardEvent.cpp" />
+    <ClCompile Include="src\utils\Utils.cpp" />
     <ClCompile Include="src\WindowsAssist.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -129,9 +133,13 @@
     <QtMoc Include="QHotkey\QHotkey\qhotkey_p.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\memo\MemoData.h" />
+    <ClInclude Include="src\utils\Utils.h" />
     <QtMoc Include="src\setting\SettingWidget.h" />
     <QtMoc Include="src\memo\MemoFrame.h" />
     <QtMoc Include="src\memo\MemoManager.h" />
+    <ClInclude Include="src\memo\MemoHintDlg.h" />
+    <ClInclude Include="src\utils\DataBaseManager.h" />
     <ClInclude Include="src\utils\KeyboardEvent.h" />
     <QtMoc Include="src\shortcut\ShortcutWidget.h" />
     <QtMoc Include="src\shortcut\ShortcutService.h" />

@@ -12,3 +12,12 @@ private slots:
     void test_ShortcutFunction_getProcessor();
 };
 
+
+class TestClass2 : public QObject {
+    Q_OBJECT
+private slots:
+    void test0() {
+
+    }
+};
+

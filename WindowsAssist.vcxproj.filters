@@ -34,6 +34,9 @@
     <Filter Include="src\memo">
       <UniqueIdentifier>{0f73b741-ab55-4f36-8dad-11205843ce1b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\githelp">
+      <UniqueIdentifier>{7d398113-526f-4b29-96b6-93ac65c040d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="WindowsAssist.qrc">
@@ -80,6 +83,12 @@
     <ClCompile Include="src\memo\MemoManager.cpp">
       <Filter>src\memo</Filter>
     </ClCompile>
+    <ClCompile Include="src\utils\DataBaseManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\Utils.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\WindowsAssist.h">
@@ -109,6 +118,9 @@
     <QtMoc Include="src\memo\MemoManager.h">
       <Filter>src\memo</Filter>
     </QtMoc>
+    <QtMoc Include="src\memo\MemoHintDlg.cpp">
+      <Filter>src\memo</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="src\WindowsAssist.ui">
@@ -121,6 +133,9 @@
       <Filter>src\setting</Filter>
     </QtUic>
     <QtUic Include="src\memo\MemoFrame.ui">
+      <Filter>src\memo</Filter>
+    </QtUic>
+    <QtUic Include="src\memo\MemoHintDlg.ui">
       <Filter>src\memo</Filter>
     </QtUic>
   </ItemGroup>
@@ -139,6 +154,18 @@
     </ClInclude>
     <ClInclude Include="src\shortcut\ShortcutFunction.h">
       <Filter>src\shortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\DataBaseManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memo\MemoHintDlg.h">
+      <Filter>src\memo</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\Utils.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memo\MemoData.h">
+      <Filter>src\memo</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

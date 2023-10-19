@@ -22,6 +22,7 @@ void setStyleSheet() {
 
 int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR cmdline, int nCmdShow)
 {
+    QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     int argc = 0;
     QApplication a(argc, nullptr);
     setStyleSheet();

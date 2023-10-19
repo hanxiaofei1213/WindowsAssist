@@ -49,8 +49,8 @@ void WindowsAssist::showEvent(QShowEvent* event) {
 }
 
 void WindowsAssist::closeEvent(QCloseEvent* event) {
-    hide();
-    //exit(0);
+    //hide();
+    exit(0);
 }
 
 void WindowsAssist::onTrayActivated(QSystemTrayIcon::ActivationReason reason) {
